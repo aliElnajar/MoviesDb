@@ -3,7 +3,7 @@ const API_ENDPOINT = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MO
 
 export const useFetch = (param) => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useStat e(true);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState({ show: false, msg: "" });
 
   const fetchMovie = useCallback(async () => {
