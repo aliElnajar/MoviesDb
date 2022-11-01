@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-const altImg =
+export const altImg =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 
-const Movie = ({ Poster, Year, Title, Type, id }) => {
+const Movie = ({ Poster, Year, Title, id }) => {
   return (
     <Link to={`/movies/${id}`} className="movie">
       <img src={Poster === "N/A" ? altImg : Poster} />

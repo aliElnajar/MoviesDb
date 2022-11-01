@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import { useFetch } from "../hooks/useFetch";
 
 const FetchContext = React.createContext();
 
 export const ContextProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState("batman");
+  const { loading, error, data: movies } = useFetch(`&s=${searchTerm}`);
+  const [gridView, setGridView] = useState(true);
+  const gridHandler = () => {
+    setGridView(true);
+  };
+
+  const listHandler = () => {
+    setGridView(false);
+  };
 
   const searchHandler = (value) => {
     setSearchTerm(value);
   };
-  const { loading, error, data: movies } = useFetch(`&s=${searchTerm}`);
-  useEffect(() => {}, []);
 
   return (
     <FetchContext.Provider
@@ -20,6 +27,9 @@ export const ContextProvider = ({ children }) => {
         error,
         searchHandler,
         searchTerm,
+        gridHandler,
+        listHandler,
+        gridView,
       }}
     >
       {children}

@@ -37,11 +37,11 @@ const MovieDetails = () => {
           <span>Actors:</span> {Actors}
         </h3>
         <p>
-          <span>Plot:</span>
+          <span>movie line : </span>
           {plot}
         </p>
         <h4>
-          <span>Released year:</span>
+          <span>Release year:</span>
           {year}
         </h4>
         <Link className="btn" to="/">
