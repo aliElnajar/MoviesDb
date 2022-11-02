@@ -50,8 +50,9 @@ const Wrapper = styled.div`
   display: flex;
   gap: 0.5rem;
   margin-top: 10rem;
+  margin-right: 0.5rem;
   .active {
-    background: #248888;
+    background: #2f2f2f;
     color: #fff;
   }
 
@@ -60,7 +61,7 @@ const Wrapper = styled.div`
     border: 0.5px solid transparent;
     text-align: center;
 
-    color: #248888;
+    color: #2f2f2f;
     width: 1.5rem;
     border-radius: 4px;
     height: 1.5rem;

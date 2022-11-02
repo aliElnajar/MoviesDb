@@ -4,6 +4,7 @@ import Movie from "./Movie";
 import ListView from "./ListView";
 const Movies = () => {
   const { movies, loading, gridView } = useContext(FetchContext);
+  console.log(movies);
   if (loading) {
     return <div className="loading"></div>;
   }
